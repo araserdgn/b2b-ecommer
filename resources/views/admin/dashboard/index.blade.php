@@ -1,12 +1,8 @@
 <x-app-layout>
-    <div class="text-center">
-
-        <mark>ADMİN DASHBOARD</mark>
-    </div>
 
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center">
+            <mark>ADMİN DASHBOARD</mark>
         </h2>
     </x-slot>
 

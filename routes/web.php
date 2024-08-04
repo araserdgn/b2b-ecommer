@@ -10,7 +10,9 @@ Route::get('/admin/login', [AuthController::class, 'login'])->name('admin.login'
 
 Route::get('/admin/dashboard', [DashboardController::class,'index'])
 ->name('admin.dashboard.index')
-->middleware('user.type');
+->middleware('user.type:admin'); // user.type middlewaresine admin olarak manuel değişken atadık
+
+
 
 Route::get('/', function () {
     return view('welcome');

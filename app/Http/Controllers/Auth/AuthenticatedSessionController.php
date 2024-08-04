@@ -28,9 +28,16 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
-    }
+        // Admin girişli ise admin dashboarda yönlendirme
+        if (Auth()->user()->user_type == 'admin') {
+            return redirect()->intended(route('admin.dashboard.index', absolute: false)); //BU KISMI DÜZELTTİM , ADMİN GİRİŞ YAPINCA ADMİNE AİT İNDEX'E YÖNLENMELİ
+        }
+        else {
+            return redirect()->intended(route('dashboard', absolute: false));
 
+        }
+
+    }
     /**
      * Destroy an authenticated session.
      */
