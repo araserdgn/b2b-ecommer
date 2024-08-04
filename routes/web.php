@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get('/admin/login', [AuthController::class, 'login'])->name('admin.login');
 
 Route::get('/', function () {
     return view('welcome');
