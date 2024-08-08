@@ -18,3 +18,4 @@ Route::group(['middleware' => ['auth','user.type:admin'], 'prefix' => 'admin', '
 });
 
 ?>
+
