@@ -13,5 +13,9 @@ class AuthController extends Controller
         return view('admin.auth.login');
     }
 
+    public function forgotPassword() :View{
+        return view('admin.auth.forgot-password');
+    }
+
 
 }

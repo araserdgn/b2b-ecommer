@@ -16,7 +16,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Login</title>
+    <title>Forgot Password</title>
 
     <meta name="description" content="" />
 
@@ -31,8 +31,8 @@
       rel="stylesheet"
     />
 
-   <!-- Icons. Uncomment required icon fonts -->
-   <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css')}}" />
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
 
    <!-- Core CSS -->
    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/core.css')}}" class="template-customizer-core-css" />
@@ -50,8 +50,6 @@
     <script src="{{ asset('admin/assets/vendor/js/helpers.js')}}"></script>
 
 
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
   </head>
 
@@ -60,14 +58,23 @@
 
     <div class="container-xxl">
       <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
-          <!-- Register -->
+        <div class="authentication-inner py-4">
+          <!-- Forgot Password -->
           <div class="card">
             <div class="card-body">
+              <!-- Logo -->
 
-              <h4 class="mb-2 text-center">Welcome to Login Page</h4>
+              <!-- /Logo -->
+              <h4 class="mb-2 text-center">Forgot Password? 🔒</h4>
+              <p class="mb-4 ">Enter your email and we'll send you instructions to reset your password</p>
 
-              <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+              @if(session('status'))
+                <div class="alert alert-danger">
+                    {{$errors->first('status')}}
+                </div>
+              @endif
+
+              <form id="formAuthentication" class="mb-3" action="{{ route('password.email') }}" method="POST">
                 @csrf
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
@@ -76,79 +83,38 @@
                     class="form-control"
                     id="email"
                     name="email"
-                    placeholder="Enter your email or username"
+                    placeholder="Enter your email"
                     autofocus
                     value="{{ old('email') }}"
                   />
                 </div>
 
                 @if ($errors->first('email'))
-                    <div class="alert alert-danger">
-                        {{ $errors->first('email') }}
-                    </div>
+
+                <div class="alert alert-danger">
+                    {{$errors->first('email')}}
+                </div>
 
                 @endif
 
-                <div class="mb-3 form-password-toggle">
-                  <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
-                    <a href="{{ route('admin.forgotPassword') }}">
-                      <small>Forgot Password?</small>
-                    </a>
-                  </div>
-                  <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      id="password"
-                      class="form-control"
-                      name="password"
-                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                        aria-describedby="password"
-                      autocomplete="current.password"
-                    />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-
-
-                @if ($errors->first('password'))
-                    <div class="alert alert-danger">
-                        {{ $errors->first('password') }}
-                    </div>
-                @endif
-
-
-
-
-                </div>
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember-me" />
-                    <label class="form-check-label" for="remember-me"> Remember Me </label>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
-                </div>
+                <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
               </form>
-
-              <p class="text-center">
-                <span>New on our platform?</span>
-                <a href="auth-register-basic.html">
-                  <span>Create an account</span>
+              <div class="text-center">
+                <a href="{{ route('admin.login') }}" class="d-flex align-items-center justify-content-center">
+                  <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
+                  Return Login
                 </a>
-              </p>
+              </div>
             </div>
           </div>
-          <!-- /Register -->
+          <!-- /Forgot Password -->
         </div>
       </div>
     </div>
 
     <!-- / Content -->
 
-
-
-    <!-- Core JS -->
+   <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="{{ asset('admin/assets/vendor/libs/jquery/jquery.js') }}"></script>
     <script src="{{ asset('admin/assets/vendor/libs/popper/popper.js')}}"></script>
@@ -162,7 +128,6 @@
 
     <!-- Main JS -->
     <script src="{{ asset('admin/assets/js/main.js')}}"></script>
-
 
     <!-- Page JS -->
 
