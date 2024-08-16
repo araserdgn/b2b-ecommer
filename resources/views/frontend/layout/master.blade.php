@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<!--
-Template: Metronic Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
-Version: 1.0.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
+
 <html lang="en">
 <!--<![endif]-->
 
 <!-- Head BEGIN -->
 <head>
   <meta charset="utf-8">
-  <title>Cool green dress with red bell | Metronic Shop UI</title>
+  <title>1-A DER</title>
 
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -40,26 +28,26 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|PT+Sans+Narrow|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
   <!-- Fonts END -->
 
-  <!-- Global styles START -->
-  <link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Global styles END -->
+<link href="{{ asset('frontend/assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Global styles END -->
 
-  <!-- Page level plugin styles START -->
-  <link href="assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet">
-  <link href="assets/plugins/owl.carousel/assets/owl.carousel.css" rel="stylesheet">
-  <link href="assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
-  <link href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"><!-- for slider-range -->
-  <link href="assets/plugins/rateit/src/rateit.css" rel="stylesheet" type="text/css">
-  <!-- Page level plugin styles END -->
+<!-- Page level plugin styles START -->
+<link href="{{ asset('frontend/assets/plugins/fancybox/source/jquery.fancybox.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/plugins/owl.carousel/assets/owl.carousel.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/plugins/uniform/css/uniform.default.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('frontend/http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css') }}" rel="stylesheet" type="text/css"><!-- for slider-range -->
+<link href="{{ asset('frontend/assets/plugins/rateit/src/rateit.css') }}" rel="stylesheet" type="text/css">
+<!-- Page level plugin styles END -->
 
-  <!-- Theme styles START -->
-  <link href="assets/pages/css/components.css" rel="stylesheet">
-  <link href="assets/corporate/css/style.css" rel="stylesheet">
-  <link href="assets/pages/css/style-shop.css" rel="stylesheet" type="text/css">
-  <link href="assets/corporate/css/style-responsive.css" rel="stylesheet">
-  <link href="assets/corporate/css/themes/red.css" rel="stylesheet" id="style-color">
-  <link href="assets/corporate/css/custom.css" rel="stylesheet">
+<!-- Theme styles START -->
+<link href="{{ asset('frontend/assets/pages/css/components.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/corporate/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/pages/css/style-shop.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('frontend/assets/corporate/css/style-responsive.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/corporate/css/themes/red.css') }}" rel="stylesheet" id="style-color">
+<link href="{{ asset('frontend/assets/corporate/css/custom.css') }}" rel="stylesheet">
+
   <!-- Theme styles END -->
 </head>
 <!-- Head END -->
@@ -130,7 +118,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="shop-index.html"><img src="assets/corporate/img/logos/logo-shop-red.png" alt="Metronic Shop UI"></a>
+        <a class="site-logo" href="shop-index.html"><img src="{{ asset('frontend/assets/corporate/img/logos/logo-shop-red.png') }}" alt="Metronic Shop UI"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -146,56 +134,56 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
             <div class="top-cart-content">
               <ul class="scroller" style="height: 250px;">
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
                   <a href="javascript:void(0);" class="del-goods">&nbsp;</a>
                 </li>
                 <li>
-                  <a href="shop-item.html"><img src="assets/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>
+                  <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/cart-img.jpg') }}" alt="Rolex Classic Watch" width="37" height="34"></a>
                   <span class="cart-content-count">x 1</span>
                   <strong><a href="shop-item.html">Rolex Classic Watch</a></strong>
                   <em>$1230</em>
@@ -296,11 +284,11 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       </div>
                       <div class="col-md-12 nav-brands">
                         <ul>
-                          <li><a href="shop-product-list.html"><img title="esprit" alt="esprit" src="assets/pages/img/brands/esprit.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="gap" alt="gap" src="assets/pages/img/brands/gap.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="next" alt="next" src="assets/pages/img/brands/next.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="puma" alt="puma" src="assets/pages/img/brands/puma.jpg"></a></li>
-                          <li><a href="shop-product-list.html"><img title="zara" alt="zara" src="assets/pages/img/brands/zara.jpg"></a></li>
+                          <li><a href="shop-product-list.html"><img title="esprit" alt="esprit" src="{{ asset('frontend/assets/pages/img/brands/esprit.jpg') }}"></a></li>
+                          <li><a href="shop-product-list.html"><img title="gap" alt="gap" src="{{ asset('frontend/assets/pages/img/brands/gap.jpg') }}"></a></li>
+                          <li><a href="shop-product-list.html"><img title="next" alt="next" src="{{ asset('frontend/assets/pages/img/brands/next.jpg') }}"></a></li>
+                          <li><a href="shop-product-list.html"><img title="puma" alt="puma" src="{{ asset('frontend/assets/pages/img/brands/puma.jpg') }}"></a></li>
+                          <li><a href="shop-product-list.html"><img title="zara" alt="zara" src="{{ asset('frontend/assets/pages/img/brands/zara.jpg') }}"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -321,7 +309,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="product-item">
                           <div class="pi-img-wrapper">
-                            <a href="shop-item.html"><img src="assets/pages/img/products/model4.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
+                            <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/model4.jpg') }}" class="img-responsive" alt="Berry Lace Dress"></a>
                           </div>
                           <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
                           <div class="pi-price">$29.00</div>
@@ -331,7 +319,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="product-item">
                           <div class="pi-img-wrapper">
-                            <a href="shop-item.html"><img src="assets/pages/img/products/model3.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
+                            <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/model3.jpg') }}" class="img-responsive" alt="Berry Lace Dress"></a>
                           </div>
                           <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
                           <div class="pi-price">$29.00</div>
@@ -341,7 +329,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="product-item">
                           <div class="pi-img-wrapper">
-                            <a href="shop-item.html"><img src="assets/pages/img/products/model7.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
+                            <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/model7.jpg') }}" class="img-responsive" alt="Berry Lace Dress"></a>
                           </div>
                           <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
                           <div class="pi-price">$29.00</div>
@@ -351,7 +339,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                       <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="product-item">
                           <div class="pi-img-wrapper">
-                            <a href="shop-item.html"><img src="assets/pages/img/products/model4.jpg" class="img-responsive" alt="Berry Lace Dress"></a>
+                            <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/model4.jpg') }}" class="img-responsive" alt="Berry Lace Dress"></a>
                           </div>
                           <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
                           <div class="pi-price">$29.00</div>
@@ -474,17 +462,17 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
             <div class="sidebar-products clearfix">
               <h2>Bestsellers</h2>
               <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k1.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/k1.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
                 <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
                 <div class="price">$31.00</div>
               </div>
               <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k4.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/k4.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
                 <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
                 <div class="price">$23.00</div>
               </div>
               <div class="item">
-                <a href="shop-item.html"><img src="assets/pages/img/products/k3.jpg" alt="Some Shoes in Animal with Cut Out"></a>
+                <a href="shop-item.html"><img src="{{ asset('frontend/assets/pages/img/products/k3.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
                 <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
                 <div class="price">$86.00</div>
               </div>
@@ -498,12 +486,12 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
               <div class="row">
                 <div class="col-md-6 col-sm-6">
                   <div class="product-main-image">
-                    <img src="assets/pages/img/products/model7.jpg" alt="Cool green dress with red bell" class="img-responsive" data-BigImgsrc="assets/pages/img/products/model7.jpg">
+                    <img src="{{ asset('frontend/assets/pages/img/products/model7.jpg') }}" alt="Cool green dress with red bell" class="img-responsive" data-BigImgsrc="{{ asset('frontend/assets/pages/img/products/model7.jpg') }}">
                   </div>
                   <div class="product-other-images">
-                    <a href="assets/pages/img/products/model3.jpg" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="assets/pages/img/products/model3.jpg"></a>
-                    <a href="assets/pages/img/products/model4.jpg" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="assets/pages/img/products/model4.jpg"></a>
-                    <a href="assets/pages/img/products/model5.jpg" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="assets/pages/img/products/model5.jpg"></a>
+                    <a href="assets/pages/img/products/model3.jpg') }}" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model3.jpg') }}"></a>
+                    <a href="assets/pages/img/products/model4.jpg') }}" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model4.jpg') }}"></a>
+                    <a href="assets/pages/img/products/model5.jpg') }}" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model5.jpg') }}"></a>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6">
@@ -666,9 +654,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k1.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k1.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -681,9 +669,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k2.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k2.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -695,9 +683,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k3.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k3.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k3.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -709,9 +697,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k4.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k4.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -724,9 +712,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k1.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k1.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -738,9 +726,9 @@ Nostrud duis molestie at dolore.</p>
               <div>
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('frontend/assets/pages/img/products/k2.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
                     <div>
-                      <a href="assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
+                      <a href="assets/pages/img/products/k2.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
                       <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
@@ -760,18 +748,18 @@ Nostrud duis molestie at dolore.</p>
     <div class="brands">
       <div class="container">
             <div class="owl-carousel owl-carousel6-brands">
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/canon.jpg" alt="canon" title="canon"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/esprit.jpg" alt="esprit" title="esprit"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/gap.jpg" alt="gap" title="gap"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/next.jpg" alt="next" title="next"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/puma.jpg" alt="puma" title="puma"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/zara.jpg" alt="zara" title="zara"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/canon.jpg" alt="canon" title="canon"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/esprit.jpg" alt="esprit" title="esprit"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/gap.jpg" alt="gap" title="gap"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/next.jpg" alt="next" title="next"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/puma.jpg" alt="puma" title="puma"></a>
-              <a href="shop-product-list.html"><img src="assets/pages/img/brands/zara.jpg" alt="zara" title="zara"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/canon.jpg') }}" alt="canon" title="canon"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/esprit.jpg') }}" alt="esprit" title="esprit"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/gap.jpg') }}" alt="gap" title="gap"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/next.jpg') }}" alt="next" title="next"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/puma.jpg') }}" alt="puma" title="puma"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/zara.jpg') }}" alt="zara" title="zara"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/canon.jpg') }}" alt="canon" title="canon"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/esprit.jpg') }}" alt="esprit" title="esprit"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/gap.jpg') }}" alt="gap" title="gap"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/next.jpg') }}" alt="next" title="next"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/puma.jpg') }}" alt="puma" title="puma"></a>
+              <a href="shop-product-list.html"><img src="{{ asset('frontend/assets/pages/img/brands/zara.jpg') }}" alt="zara" title="zara"></a>
             </div>
         </div>
     </div>
@@ -904,11 +892,11 @@ Nostrud duis molestie at dolore.</p>
           <!-- BEGIN PAYMENTS -->
           <div class="col-md-4 col-sm-4">
             <ul class="list-unstyled list-inline pull-right">
-              <li><img src="assets/corporate/img/payments/western-union.jpg" alt="We accept Western Union" title="We accept Western Union"></li>
-              <li><img src="assets/corporate/img/payments/american-express.jpg" alt="We accept American Express" title="We accept American Express"></li>
-              <li><img src="assets/corporate/img/payments/MasterCard.jpg" alt="We accept MasterCard" title="We accept MasterCard"></li>
-              <li><img src="assets/corporate/img/payments/PayPal.jpg" alt="We accept PayPal" title="We accept PayPal"></li>
-              <li><img src="assets/corporate/img/payments/visa.jpg" alt="We accept Visa" title="We accept Visa"></li>
+              <li><img src="{{ asset('frontend/corporate/img/payments/western-union.jpg') }}" alt="We accept Western Union" title="We accept Western Union"></li>
+              <li><img src="{{ asset('frontend/corporate/img/payments/american-express.jpg') }}" alt="We accept American Express" title="We accept American Express"></li>
+              <li><img src="{{ asset('frontend/corporate/img/payments/MasterCard.jpg') }}" alt="We accept MasterCard" title="We accept MasterCard"></li>
+              <li><img src="{{ asset('frontend/corporate/img/payments/PayPal.jpg') }}" alt="We accept PayPal" title="We accept PayPal"></li>
+              <li><img src="{{ asset('frontend/corporate/img/payments/visa.jpg') }}" alt="We accept Visa" title="We accept Visa"></li>
             </ul>
           </div>
           <!-- END PAYMENTS -->
@@ -928,12 +916,12 @@ Nostrud duis molestie at dolore.</p>
               <div class="row">
                 <div class="col-md-6 col-sm-6 col-xs-3">
                   <div class="product-main-image">
-                    <img src="assets/pages/img/products/model7.jpg" alt="Cool green dress with red bell" class="img-responsive">
+                    <img src="{{ asset('frontend/assets/pages/img/products/model7.jpg') }}" alt="Cool green dress with red bell" class="img-responsive">
                   </div>
                   <div class="product-other-images">
-                    <a href="javascript:;" class="active"><img alt="Berry Lace Dress" src="assets/pages/img/products/model3.jpg"></a>
-                    <a href="javascript:;"><img alt="Berry Lace Dress" src="assets/pages/img/products/model4.jpg"></a>
-                    <a href="javascript:;"><img alt="Berry Lace Dress" src="assets/pages/img/products/model5.jpg"></a>
+                    <a href="javascript:;" class="active"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model3.jpg') }}"></a>
+                    <a href="javascript:;"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model4.jpg') }}"></a>
+                    <a href="javascript:;"><img alt="Berry Lace Dress" src="{{ asset('frontend/assets/pages/img/products/model5.jpg') }}"></a>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-9">
@@ -987,24 +975,23 @@ Nostrud duis molestie at dolore.</p>
     <!-- Load javascripts at bottom, this will reduce page load time -->
     <!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
     <!--[if lt IE 9]>
-    <script src="assets/plugins/respond.min.js"></script>
     <![endif]-->
-    <script src="assets/plugins/jquery.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/corporate/scripts/back-to-top.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/jquery-migrate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/corporate/scripts/back-to-top.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
     <!-- END CORE PLUGINS -->
 
     <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
-    <script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script><!-- pop up -->
-    <script src="assets/plugins/owl.carousel/owl.carousel.min.js" type="text/javascript"></script><!-- slider for products -->
-    <script src='assets/plugins/zoom/jquery.zoom.min.js' type="text/javascript"></script><!-- product zoom -->
-    <script src="assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript"></script><!-- Quantity -->
-    <script src="assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/rateit/src/jquery.rateit.js" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/fancybox/source/jquery.fancybox.pack.js') }}" type="text/javascript"></script><!-- pop up -->
+    <script src="{{ asset('frontend/assets/plugins/owl.carousel/owl.carousel.min.js') }}" type="text/javascript"></script><!-- slider for products -->
+    <script src="{{ asset('frontend/assets/plugins/zoom/jquery.zoom.min.js') }}" type="text/javascript"></script><!-- product zoom -->
+    <script src="{{ asset('frontend/assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js') }}" type="text/javascript"></script><!-- Quantity -->
+    <script src="{{ asset('frontend/assets/plugins/uniform/jquery.uniform.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/plugins/rateit/src/jquery.rateit.js') }}" type="text/javascript"></script>
 
-    <script src="assets/corporate/scripts/layout.js" type="text/javascript"></script>
+    <script src="{{ asset('frontend/assets/corporate/scripts/layout.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             Layout.init();
