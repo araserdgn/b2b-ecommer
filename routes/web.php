@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,7 @@ use Illuminate\Support\Facades\Route;
 //!ADMİN ROUTERLERİNİ AYRI BİR ROUTE DOSYASINDA EKLEDİM
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
