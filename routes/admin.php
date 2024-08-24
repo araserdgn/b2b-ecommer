@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProfilController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,9 @@ Route::group(['middleware' => ['auth','user.type:admin'], 'prefix' => 'admin', '
 
     Route::get('/dashboard', [DashboardController::class,'index'])
     ->name('dashboard.index');
+
+    Route::get('/profile', [ProfilController::class ,'index'])
+    ->name('profile.index');
 
     //->middleware('user.type:admin'); // user.type middlewaresine admin olarak manuel değişken atadık
     //gerek kalmadı ama yukard tanımlando
