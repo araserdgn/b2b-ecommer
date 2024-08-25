@@ -39,7 +39,8 @@
 
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/apex-charts/apex-charts.css')}}" />
 
-    <!-- Page CSS -->
+    <!-- Toaster CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
     <!-- Helpers -->
     <script src="{{ asset('admin/assets/vendor/js/helpers.js')}}"></script>
@@ -102,6 +103,20 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    {{-- Toaster --}}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+
+        @if( $errors->any() ) // hataları yakalayan fonk.
+
+            @foreach( $errors->all() as $error) //gelen hataların hepsini al
+                toastr.error("{{ $error }}") //toastr paketi ile ekrana bas
+            @endforeach
+
+        @endif
+    </script>
 
     @yield('js')
 
