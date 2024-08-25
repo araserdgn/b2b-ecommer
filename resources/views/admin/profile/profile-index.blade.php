@@ -67,7 +67,11 @@
                         </div>
                         <hr class="my-0" />
                         <div class="card-body">
-                          <form id="formAccountSettings" method="POST" onsubmit="return false">
+
+                          <form action="{{ route('admin.profile.update') }}" id="formAccountSettings" method="POST" >
+
+                            @csrf
+
                             <div class="row">
                               <div class="mb-3 col-md-6">
                                 <label for="firstName" class="form-label">Full Name</label>
@@ -154,12 +158,15 @@
 
 
                             </div>
+
                             <div class="mt-2">
                               <button type="submit" class="btn btn-primary me-2">Save changes</button>
                               <button type="reset" class="btn btn-outline-secondary">Cancel</button>
                             </div>
+
                           </form>
                         </div>
+
                         <!-- /Account -->
                       </div>
                       <div class="card">
