@@ -12,7 +12,10 @@ Route::get('/admin/forgot-password', [AuthController::class, 'forgotPassword'])-
 
 
 // 'as' burda name içindeki dosya ismini temsil eder örn: admin.dashboard.index olmasını saglıyr
-Route::group(['middleware' => ['auth','user.type:admin'], 'prefix' => 'admin', 'as' => 'admin.'], function() {
+Route::group([
+    'middleware' => ['auth','user.type:admin'],
+    'prefix' => 'admin', 'as' => 'admin.'
+    ], function() {
 
     Route::get('/dashboard', [DashboardController::class,'index'])
     ->name('dashboard.index');

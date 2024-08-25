@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum('user_type',['user','admin'])->default('user'); //enum => user_type sadece user ve admin değeri alcagnı belirt
             $table->text('address')->nullable();
             $table->text('vergi_no')->nullable();
+            $table->text('phone')->nullable();
             $table->text('il')->nullable();
             $table->text('website')->nullable();
             $table->text('facebook')->nullable();
