@@ -1,33 +1,39 @@
 <?php
 
-    namespace App\Traits;
+namespace App\Traits;
 
 use Illuminate\Http\Request;
-use File;
+use Illuminate\Support\Facades\File;
 
+trait FileUploadTrait
+{
+    // Resim yükleyen trait. Traitler sürekli kullanılabilecek yapılardır
 
-    trait FileUploadTrait { // Resim yükleyen trait. Traitler sürekli kullanılabilecek yapılardır
+    public function uploadImage(Request $request, string $inputName, string $oldPath = null, string $path = '/uploads'): ?string
+    {
+        try {
+            if ($request->hasFile($inputName) && $request->file($inputName)->isValid()) {
+                $image = $request->file($inputName);
+                $ext = $image->getClientOriginalExtension(); // Yüklenen resim dosyasının uzantısını alır (jpg, png vb.)
 
-        public function uploadImage(Request $request, $inputName, $oldPath=null, $path='/uploads') {
+                // Unique isim oluşturuyoruz
+                $imageName = 'media_' . uniqid() . '.' . $ext; // uniqid => random sayı üretir
 
-            if($request->hasFile($inputName)) {
-                $image = $request->{$inputName};
-                $ext = $image->getClientOriginalExtension(); // yüklenen resim dosyasının uzantısını alır *jpg,png gibi
+                // Dosya yükleme aşaması
+                $image->move(public_path($path), $imageName); // Yüklenecek yer ve dosya adı
 
-                // Unique isim olusturuyoruz
-                $imageName = 'media_'. uniqid(). '.'.$ext; //uniqid => random sayı üretir
-
-                //Dosya yükleme aşaması
-                $image->move(public_path($path), $imageName); // path(yüklenecek yer) ve yüklenecek dosya
-
-                if($oldPath && File::exists(public_path($oldPath))) {
-                    File::delete($oldPath);
+                // Eski resmi sil
+                if ($oldPath && File::exists(public_path($oldPath))) {
+                    File::delete(public_path($oldPath));
                 }
 
-                // /uploads/media_5415.png tarzında bir çıktı döncek
-                return $path.'/'.$imageName;
+                return $path . '/' . $imageName; // Yüklenen dosyanın yolu
             }
-
+        } catch (\Exception $e) {
+            // Hata durumunda bir hata mesajı döndür
+            return null; // Hata durumunda null döndür
         }
 
+        return null; // Dosya yoksa null döndür
     }
+}

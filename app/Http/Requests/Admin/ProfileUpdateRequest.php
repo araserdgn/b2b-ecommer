@@ -23,18 +23,18 @@ class ProfileUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'avatar' => ['nullable','image','max:000'],
-            'name' => ['required','max:250','string'],
-            'email' => ['required','max:250','email'],
-            'vergi_no' => ['nullable','max:250'],
-            'phone' => ['nullable','max:250'],
-            'address' => ['nullable','max:500'],
-            'il' => ['nullable','max:250'],
-            'ilce' => ['nullable','max:250'],
-            'website' => ['nullable','max:250'],
-            'facebook' => ['nullable','max:250'],
-            'x_link' => ['nullable','max:250'],
-            'insta' => ['nullable','max:250'],
+            'avatar' => 'nullable','image','max:800',
+            'name' => 'required','max:250','string',
+            'email' => 'required','max:250','email',
+            'vergi_no' => 'nullable','max:250',
+            'phone' => 'nullable','max:250',
+            'address' => 'nullable','max:500',
+            'il' => 'nullable','max:250',
+            'ilce' => 'nullable','max:250',
+            'website' => 'nullable','max:250',
+            'facebook' => 'nullable','max:250',
+            'x_link' => 'nullable','max:250',
+            'insta' => 'nullable','max:250',
         ];
     }
 }
