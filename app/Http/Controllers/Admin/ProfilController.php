@@ -16,7 +16,8 @@ class ProfilController extends Controller
 {
 
     public function index(): View {
-        return view('admin.profile.profile-index');
+        $user = Auth::user(); // Auth::user() metodu ile auth'deki kullanıcıyı alır
+        return view('admin.profile.profile-index', compact('user'));
     }
 
     public function update(ProfileUpdateRequest $request)
@@ -36,8 +37,10 @@ class ProfilController extends Controller
         $user->facebook = $request->facebook;
         $user->insta = $request->insta;
         if ($request->hasFile('avatar')) {
-            $avatarPath = $request->file('avatar')->store('avatars', 'uploads'); // 'public' diskine yükle
-            $user->avatar = $avatarPath; // Kullanıcı modelindeki avatar alanına kaydet
+            $file = $request->file('avatar');
+            $filename = $file->getClientOriginalName(); // Kullanıcının yüklediği orijinal dosya adı
+            $file->move(public_path('default'), $filename); // Dosyayı public/default klasörüne taşı
+            $user->avatar = 'default/' . $filename; // Veritabanına kaydedilecek yol
         }
         $user->save();
 

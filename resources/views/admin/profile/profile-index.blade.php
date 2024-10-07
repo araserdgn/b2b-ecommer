@@ -80,7 +80,7 @@
                                   type="text"
                                   id="firstName"
                                   name="name"
-                                  placeholder="name"
+                                  placeholder="{{ $user->name}}"
                                   autofocus
                                 />
                               </div>
@@ -92,7 +92,7 @@
                                   type="text"
                                   id="email"
                                   name="email"
-                                  value=""
+                                  value="{{$user->email}}"
                                   placeholder="example@example.com"
                                 />
                               </div>
@@ -115,14 +115,14 @@
                                     id="phone"
                                     name="phone"
                                     class="form-control"
-                                    placeholder="202 555 0111"
+                                    placeholder="{{$user->phone}}"
                                   />
                                 </div>
                               </div>
 
                               <div class="mb-3 col-md-6">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                                  <input type="text" class="form-control" value="{{$user->address}}"  id="address" name="address" placeholder="Address" />
                               </div>
 
                               <div class="mb-3 col-md-6">
@@ -132,22 +132,22 @@
 
                               <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Website</label>
-                                <input class="form-control" type="text" id="website" name="website"  />
+                                <input class="form-control" type="text" id="website" value="{{$user->website}}" name="website"  />
                               </div>
 
                               <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Twitter</label>
-                                <input class="form-control" type="text" id="x_link" name="x_link"  />
+                                <input class="form-control" type="text" id="x_link" value="{{$user->x_link}}" name="x_link"  />
                               </div>
 
                               <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Facebook</label>
-                                <input class="form-control" type="text" id="facebook" name="facebook"  />
+                                <input class="form-control" type="text" id="facebook" value="{{$user->facebook}}" name="facebook"  />
                               </div>
 
                               <div class="mb-3 col-md-6">
                                 <label for="state" class="form-label">Instagram</label>
-                                <input class="form-control" type="text" id="insta" name="insta"  />
+                                <input class="form-control" type="text" id="insta" name="insta" value="{{$user->insta}}" />
                               </div>
 
 
@@ -201,5 +201,10 @@
 @endsection
 
 @section('js')
+    <script>
+        $(document).ready(function() {
+            $('#uploadedAvatar').attr('src', '{{ asset($user->avatar)}}')
+        })
+    </script>
     <script src="{{ asset('admin/assets/js/pages-account-settings-account.js') }}"></script>
 @endsection
