@@ -26,6 +26,10 @@ Route::group([
     Route::post('/profile', [ProfilController::class ,'update'])
     ->name('profile.update');
 
+    // Profile update
+    Route::post('/profile-password', [ProfilController::class ,'passwordUpdate'])
+    ->name('profile-password.update');
+
 
 
 

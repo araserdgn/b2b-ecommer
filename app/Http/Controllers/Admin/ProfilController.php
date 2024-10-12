@@ -5,12 +5,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProfileUpdateRequest;
-use App\Traits\FileUploadTrait;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
-use Illuminate\Support\Facades\File;
 
 class ProfilController extends Controller
 {
@@ -44,7 +42,19 @@ class ProfilController extends Controller
         }
         $user->save();
 
-        return redirect()->back()->with('success', 'Profile updated successfully!');
+        return redirect()->back()->with('success', 'Güncelleme işlemi başarılı.');
+    }
+
+    public function passwordUpdate(Request $request): RedirectResponse {
+        $request->validate([
+            'password' => ['required', 'min:6','confirmed']
+        ]);
+
+        $user=Auth::user();
+        $user->password = bcrypt($request->password); //hash sifreleme
+        $user->save();
+
+        return redirect()->back()->with('success', 'Sifre güncelleme işlemi başarılı.');
     }
 }
 

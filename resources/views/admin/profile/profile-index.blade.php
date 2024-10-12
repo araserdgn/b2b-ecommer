@@ -164,6 +164,42 @@
 
                         <!-- /Account -->
                       </div>
+
+                      <div class="card mb-2">
+                        <h5 class="card-header">Update Password</h5>
+                        <div class="card-body">
+                            <form action="{{ route('admin.profile-password.update') }}" id="formAccountSettings" method="POST" >
+
+                                @csrf
+                                <div class="row">
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="firstName" class="form-label">New Password</label>
+                                        <input
+                                          class="form-control"
+                                          type="password"
+                                          id="password"
+                                          name="password"
+                                        />
+                                    </div>
+
+                                    <div class="mb-3 col-md-6">
+                                        <label for="firstName" class="form-label">Again New Password</label>
+                                        <input
+                                          class="form-control"
+                                          type="password"
+                                          id="password_confirmation"
+                                          name="password_confirmation"
+                                        />
+                                    </div>
+
+                                </div>
+
+                            <button type="submit" class="btn btn-primary deactivate-account">Update Password</button>
+                          </form>
+                        </div>
+                      </div>
+
                       <div class="card">
                         <h5 class="card-header">Delete Account</h5>
                         <div class="card-body">
@@ -189,6 +225,7 @@
                           </form>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </div>
